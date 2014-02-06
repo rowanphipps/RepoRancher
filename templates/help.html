@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="static/displaylist.css">
+        <title>
+        Repo Rancher: Help
+        </title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="hero-unit" style="height:110px">
+                <h1>Repo Rancher</h1>
+                <p>Repo Rancher is a game which takes two Github repositories then generates a monster for each one and then battles them to see which is the more powerful.</p>
+            </div>
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="{{ url_for('home') }}">Repo Rancher</a>
+                    <ul class="nav">
+                        <li><a href="{{ url_for('home') }}">Fight!</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li class="active"><a href="{{ url_for('help_page') }}">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <h1>Help Page</h1>
+            <p>
+                Explain how to use the thingy
+            </p>
+        </div>
+    </body>
+</html>

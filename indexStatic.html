@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="static/displaylist.css">
+        <title>
+        Repo Rancher: Choose your Monsters
+        </title>
+    </head>
+    <body>
+        <!-- <div> -->
+            <div class="container">
+
+                <div class="hero-unit" style="height:110px">
+                    <h1>Repo Rancher</h1>
+                    <p>Repo Rancher is a game which takes two Github repositories then generates a monster for each one and then battles them to see which is the more powerful.</p>
+                </div>
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <a class="brand" href="#">Repo Rancher</a>
+                        <ul class="nav">
+                            <li class="active"><a href="indexStatic.html">Fight!</a></li>
+                            <li><a href="AboutStatic.html">About</a></li>
+                            <li><a href="helpStatic.html">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <form>
+                    
+                    <div class="row">
+                        <div class="span3">
+
+                            <h2>Monster 1</h2>
+                            
+                            <label>User</label>
+                            <input type="text" name="user1" placeholder="Repository Owner" required>
+                            <p>
+                            </p>
+                            <label>Repository</label>
+                            <input type="text" name="repo1" placeholder="Repository" required>
+                            
+                        </div>
+
+                        
+                        <div class="span5" align="center" style="padding-top:75px">
+                            
+                        
+                            <p>
+                                <a class="btn btn-primary btn-large" href="fightStatic.html">
+                                    Fight!
+                                </a>
+                            </p>
+                            
+                            <label for="quickfight" class="checkbox inline">Skip to outcome</label>
+                            <input type="checkbox" id="quickfight">
+                            
+                            
+                        </div>
+
+                        
+                        <div class="span4">
+
+                            <h2>Monster 2</h2>
+                            
+                            <label>User</label>
+                            <input type="text" name="user2" placeholder="Repository Owner"required>
+                            <p>
+                            </p>
+                            <label>Repository</label>
+                            <input type="text" name="repo2" placeholder="Repository" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        <!-- </div> -->
+    </body>
+</html>

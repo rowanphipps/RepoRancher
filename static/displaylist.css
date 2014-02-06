@@ -1,0 +1,20 @@
+#valuelist ul li {
+    display: inline;
+    margin: 0px;
+    list-style-type: none;
+}
+
+#statlist ul li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+
+textarea {
+    resize: none;
+    width: 460px;
+}
+
+.hero-unit {
+    background-image:url("bg.png");
+}

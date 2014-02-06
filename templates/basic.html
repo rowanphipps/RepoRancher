@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href={{ url_for('static', filename='bootstrap.min.css') }}>
+    	<link rel="stylesheet" type="text/css" href={{ url_for('static', filename='displaylist.css') }}>
+		<title>
+        	Repo Rancher
+    	</title>
+	</head>
+
+	<body>
+
+        <div class="container">
+
+    		<div class="hero-unit" style="height:110px">
+            	<h1>Repo Rancher</h1>
+            	<p>Repo Rancher is a game which takes two Github repositories then generates a monster for each one and then battles them to see which is the more powerful.</p>
+        	</div>
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="{{ url_for('home') }}">Repo Rancher</a>
+                    <ul class="nav">
+                        <li class="active"><a href="{{ url_for('home') }}">Fight!</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="{{ url_for('help_page') }}">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        	
+            <form action="{{ url_for('display') }}" method="POST">
+                
+                <div class="row">
+                    <div class="span3">
+
+                        <h2>Monster 1</h2>
+                        
+                        <label>User</label>
+                        <input type="text" name="user1" placeholder="Repository Owner" required value="mongodb">
+                        <p>
+                        </p>
+                        <label>Repository</label>
+                        <input type="text" name="repo1" placeholder="Repository" required value="mongo">
+                        
+                    </div>
+
+                    
+                    <div class="span5" align="center" style="padding-top:75px">
+                        
+                    
+                        <p>
+                            <input class="btn btn-primary btn-large" type="submit" value="Fight!">
+                        </p>
+                        
+                        <label for="quickfight" class="checkbox inline">Skip to outcome</label>
+                        <input type="checkbox" id="quickfight">
+                        
+                        
+                    </div>
+
+                    
+                    <div class="span4">
+
+                        <h2>Monster 2</h2>
+                        
+                        <label>User</label>
+                        <input type="text" name=user2 placeholder="Repository Owner"required value="git">
+                        <p>
+                        </p>
+                        <label>Repository</label>
+                        <input type="text" name=repo2 placeholder="Repository" required value="git">
+                    </div>
+                </div>
+            </form>
+        </div>
+	</body>
+</html>

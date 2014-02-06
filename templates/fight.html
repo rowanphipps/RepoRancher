@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='bootstrap.min.css') }}>
+        <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='displaylist.css') }}>
+        <title>
+        Repo Rancher: Fight!
+        </title>
+    </head>
+    <body>
+
+        <div class="container">
+        
+            <div class="hero-unit" style="height:110px">
+                <h1>Repo Rancher</h1>
+                <p>Repo Rancher is a game which takes two Github repositories then generates a monster for each one and then battles them to see which is the more powerful.</p>
+            </div>
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="{{ url_for('home') }}">Repo Rancher</a>
+                    <ul class="nav">
+                        <li><a href="{{ url_for('home') }}">Fight!</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="{{ url_for('help_page') }}">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span3">
+                    <h2>{{ m1.name }}</h2>
+                    <div id="statlist" float="left">
+                    <ul class="unstyled">
+                        <li>
+                            <div id="valuelist">
+                            <ul class="unstyled">
+                                <li>
+                                    <h4>Health: </h4>
+                                </li>
+
+                                <li>
+                                    <p id="m1Health">{{ m1.current }} / {{m1.maxHealth}}</p>
+                                </li>
+                                <li>
+                                    <div class="progress progress-striped active {{ m1.style }}">
+                                        <div class="bar" id="m1Bar" style="width: {{ m1.percent }}%;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div id="valuelist">
+                            <ul class="unstyled">
+                                <li>
+                                    <h4>Strength: </h4>
+                                </li>
+
+                                <li>
+                                    <p>{{ m1.strength }}</p>
+                                </li>
+                                
+                            </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div id="valuelist">
+                            <ul class="unstyled">
+                                <li>
+                                    <h4>Accuracy: </h4>
+                                </li>
+
+                                <li>
+                                    <p>{{ m1.accuracy }}</p>
+                                </li>
+                                
+                            </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div id="valuelist">
+                            <ul class="unstyled">
+                                <li>
+                                    <h4>Defence: </h4>
+                                </li>
+
+                                <li>
+                                    <p>{{ m1.defense }}</p>
+                                </li>
+                            </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+                    
+                </div>
+
+                <div class="span6" align="center">
+                    <h2>Battle Log</h2>
+                    
+                    <pre class="pre-scrollable" id="battleLog" style="height:350px"align="left">{{ log }}</pre>
+
+                    <h1 style="padding-top:15px" id="outcome">{{ result }}</h1>
+
+                    <p style="padding-top:12px">
+                        <a class="btn btn-primary btn-large" href="{{ url_for('home') }}">
+                            Play Again?
+                        </a>
+                    </p>
+
+                </div>
+
+                <div class="span3">
+                    <h2>{{ m2.name }}</h2>
+                    <div id="statlist" float="left">
+                    <ul class="unstyled">
+                        <li>
+                            <div id="valuelist">
+                            <ul class="unstyled">
+                                <li>
+                                    <h4>Health: </h4>
+                                </li>
+
+                                <li>
+                                    <p id="m2Health">{{ m2.current }} / {{m2.maxHealth}}</p>
+                                </li>
+                                <li>
+                                    <div class="progress progress-striped active {{ m2.style }}">
+                                        <div class="bar" id="m2Bar" style="width: {{ m2.percent }}%;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div id="valuelist">
+                            <ul class="unstyled">
+                                <li>
+                                    <h4>Strength: </h4>
+                                </li>
+
+                                <li>
+                                    <p>{{ m2.strength }}</p>
+                                </li>
+                                
+                            </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div id="valuelist">
+                            <ul class="unstyled">
+                                <li>
+                                    <h4>Accuracy: </h4>
+                                </li>
+
+                                <li>
+                                    <p>{{ m2.accuracy }}</p>
+                                </li>
+                                
+                            </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div id="valuelist">
+                            <ul class="unstyled">
+                                <li>
+                                    <h4>Defence: </h4>
+                                </li>
+
+                                <li>
+                                    <p>{{ m2.defense }}</p>
+                                </li>
+                            </ul>
+                            </div>
+                        </li>   
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
